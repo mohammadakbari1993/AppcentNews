@@ -13,6 +13,8 @@ struct Base {}
 
 struct ViewModels {}
 
+struct Localization {}
+
 struct Service {
     struct Model {}
     struct Request {}
