@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		556D103E2A7CE556006B6CF5 /* AppcentNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D103D2A7CE556006B6CF5 /* AppcentNewsApp.swift */; };
-		556D10402A7CE556006B6CF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D103F2A7CE556006B6CF5 /* ContentView.swift */; };
 		556D10422A7CE558006B6CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556D10412A7CE558006B6CF5 /* Assets.xcassets */; };
 		556D10452A7CE558006B6CF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556D10442A7CE558006B6CF5 /* Preview Assets.xcassets */; };
 		556D104F2A7CE558006B6CF5 /* AppcentNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D104E2A7CE558006B6CF5 /* AppcentNewsTests.swift */; };
@@ -27,6 +26,16 @@
 		556D11842A7D02A6006B6CF5 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11832A7D02A6006B6CF5 /* Mappable.swift */; };
 		556D11862A7D031D006B6CF5 /* Service.Model.Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11852A7D031D006B6CF5 /* Service.Model.Feed.swift */; };
 		556D11892A7D0C4A006B6CF5 /* ViewModel.Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */; };
+		556D118C2A7D25AB006B6CF5 /* Views.Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D118B2A7D25AB006B6CF5 /* Views.Feeds.swift */; };
+		556D118F2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D118E2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift */; };
+		556D11922A7D380E006B6CF5 /* Views.Common.SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11912A7D380E006B6CF5 /* Views.Common.SearchField.swift */; };
+		556D11962A7D4479006B6CF5 /* Service.Response.Common.ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11952A7D4479006B6CF5 /* Service.Response.Common.ServerError.swift */; };
+		556D11992A7D4496006B6CF5 /* Service.Response.Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11982A7D4496006B6CF5 /* Service.Response.Common.swift */; };
+		556D119C2A7D44CB006B6CF5 /* Service.Model.Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D119B2A7D44CB006B6CF5 /* Service.Model.Common.swift */; };
+		556D119F2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D119E2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift */; };
+		556D11A22A7D4A4B006B6CF5 /* Localization.Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11A12A7D4A4B006B6CF5 /* Localization.Feeds.swift */; };
+		556D11A52A7D4C9F006B6CF5 /* Views.Common.EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11A42A7D4C9F006B6CF5 /* Views.Common.EmptyListView.swift */; };
+		556D11A82A7D4D79006B6CF5 /* Views.Common.Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11A72A7D4D79006B6CF5 /* Views.Common.Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +58,6 @@
 /* Begin PBXFileReference section */
 		556D103A2A7CE556006B6CF5 /* AppcentNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppcentNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556D103D2A7CE556006B6CF5 /* AppcentNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppcentNewsApp.swift; sourceTree = "<group>"; };
-		556D103F2A7CE556006B6CF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		556D10412A7CE558006B6CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556D10442A7CE558006B6CF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		556D104A2A7CE558006B6CF5 /* AppcentNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppcentNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +78,16 @@
 		556D11832A7D02A6006B6CF5 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		556D11852A7D031D006B6CF5 /* Service.Model.Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Model.Feed.swift; sourceTree = "<group>"; };
 		556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.Feeds.swift; sourceTree = "<group>"; };
+		556D118B2A7D25AB006B6CF5 /* Views.Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Feeds.swift; sourceTree = "<group>"; };
+		556D118E2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Feeds.FeedRow.swift; sourceTree = "<group>"; };
+		556D11912A7D380E006B6CF5 /* Views.Common.SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.SearchField.swift; sourceTree = "<group>"; };
+		556D11952A7D4479006B6CF5 /* Service.Response.Common.ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Response.Common.ServerError.swift; sourceTree = "<group>"; };
+		556D11982A7D4496006B6CF5 /* Service.Response.Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Response.Common.swift; sourceTree = "<group>"; };
+		556D119B2A7D44CB006B6CF5 /* Service.Model.Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Model.Common.swift; sourceTree = "<group>"; };
+		556D119E2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Model.Common.ServerError.swift; sourceTree = "<group>"; };
+		556D11A12A7D4A4B006B6CF5 /* Localization.Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.Feeds.swift; sourceTree = "<group>"; };
+		556D11A42A7D4C9F006B6CF5 /* Views.Common.EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.EmptyListView.swift; sourceTree = "<group>"; };
+		556D11A72A7D4D79006B6CF5 /* Views.Common.Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.Loading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +143,6 @@
 				556D10682A7CE7C9006B6CF5 /* Help */,
 				556D10672A7CE7C1006B6CF5 /* Module */,
 				556D103D2A7CE556006B6CF5 /* AppcentNewsApp.swift */,
-				556D103F2A7CE556006B6CF5 /* ContentView.swift */,
 				556D10412A7CE558006B6CF5 /* Assets.xcassets */,
 				556D10432A7CE558006B6CF5 /* Preview Content */,
 				556D106A2A7CE7FD006B6CF5 /* NAMESPACING.swift */,
@@ -189,6 +206,7 @@
 		556D106C2A7CE868006B6CF5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				556D11932A7D4430006B6CF5 /* Service */,
 				556D106F2A7CE89E006B6CF5 /* Localization */,
 				556D106E2A7CE88C006B6CF5 /* Views */,
 			);
@@ -206,6 +224,9 @@
 		556D106E2A7CE88C006B6CF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				556D11A62A7D4D4D006B6CF5 /* Loading */,
+				556D11A32A7D4C80006B6CF5 /* EmptyListView */,
+				556D11902A7D37EB006B6CF5 /* SearchField */,
 				556D10752A7CE9FB006B6CF5 /* Views.Common.swift */,
 			);
 			path = Views;
@@ -262,6 +283,8 @@
 		556D11742A7CFB89006B6CF5 /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				556D11A02A7D4A3C006B6CF5 /* Localization */,
+				556D118A2A7D257E006B6CF5 /* View */,
 				556D11872A7D0C3B006B6CF5 /* ViewModel */,
 				556D11752A7CFBA0006B6CF5 /* Service */,
 			);
@@ -324,6 +347,98 @@
 				556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		556D118A2A7D257E006B6CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				556D118D2A7D25FA006B6CF5 /* Feed */,
+				556D118B2A7D25AB006B6CF5 /* Views.Feeds.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		556D118D2A7D25FA006B6CF5 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				556D118E2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		556D11902A7D37EB006B6CF5 /* SearchField */ = {
+			isa = PBXGroup;
+			children = (
+				556D11912A7D380E006B6CF5 /* Views.Common.SearchField.swift */,
+			);
+			path = SearchField;
+			sourceTree = "<group>";
+		};
+		556D11932A7D4430006B6CF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				556D119A2A7D44BB006B6CF5 /* Model */,
+				556D11942A7D444A006B6CF5 /* Response */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		556D11942A7D444A006B6CF5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				556D11972A7D447D006B6CF5 /* ServerError */,
+				556D11982A7D4496006B6CF5 /* Service.Response.Common.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		556D11972A7D447D006B6CF5 /* ServerError */ = {
+			isa = PBXGroup;
+			children = (
+				556D11952A7D4479006B6CF5 /* Service.Response.Common.ServerError.swift */,
+			);
+			path = ServerError;
+			sourceTree = "<group>";
+		};
+		556D119A2A7D44BB006B6CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				556D119D2A7D44D2006B6CF5 /* ServerError */,
+				556D119B2A7D44CB006B6CF5 /* Service.Model.Common.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		556D119D2A7D44D2006B6CF5 /* ServerError */ = {
+			isa = PBXGroup;
+			children = (
+				556D119E2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift */,
+			);
+			path = ServerError;
+			sourceTree = "<group>";
+		};
+		556D11A02A7D4A3C006B6CF5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				556D11A12A7D4A4B006B6CF5 /* Localization.Feeds.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		556D11A32A7D4C80006B6CF5 /* EmptyListView */ = {
+			isa = PBXGroup;
+			children = (
+				556D11A42A7D4C9F006B6CF5 /* Views.Common.EmptyListView.swift */,
+			);
+			path = EmptyListView;
+			sourceTree = "<group>";
+		};
+		556D11A62A7D4D4D006B6CF5 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				556D11A72A7D4D79006B6CF5 /* Views.Common.Loading.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,20 +572,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				556D10722A7CE8E0006B6CF5 /* Base.ViewModel.swift in Sources */,
+				556D11A22A7D4A4B006B6CF5 /* Localization.Feeds.swift in Sources */,
 				556D11702A7CF8E0006B6CF5 /* DataRequest.swift in Sources */,
+				556D11992A7D4496006B6CF5 /* Service.Response.Common.swift in Sources */,
+				556D118F2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift in Sources */,
+				556D119C2A7D44CB006B6CF5 /* Service.Model.Common.swift in Sources */,
 				556D117A2A7CFBDA006B6CF5 /* Service.Request.Feed.swift in Sources */,
+				556D11922A7D380E006B6CF5 /* Views.Common.SearchField.swift in Sources */,
 				556D11862A7D031D006B6CF5 /* Service.Model.Feed.swift in Sources */,
-				556D10402A7CE556006B6CF5 /* ContentView.swift in Sources */,
 				556D11732A7CF9B9006B6CF5 /* Network.Service.swift in Sources */,
 				556D11892A7D0C4A006B6CF5 /* ViewModel.Feeds.swift in Sources */,
+				556D11962A7D4479006B6CF5 /* Service.Response.Common.ServerError.swift in Sources */,
 				556D10762A7CE9FB006B6CF5 /* Views.Common.swift in Sources */,
 				556D11802A7D0259006B6CF5 /* Service.Response.Feed.swift in Sources */,
 				556D11842A7D02A6006B6CF5 /* Mappable.swift in Sources */,
 				556D106B2A7CE7FD006B6CF5 /* NAMESPACING.swift in Sources */,
+				556D119F2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift in Sources */,
 				556D116D2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift in Sources */,
 				556D103E2A7CE556006B6CF5 /* AppcentNewsApp.swift in Sources */,
+				556D11A52A7D4C9F006B6CF5 /* Views.Common.EmptyListView.swift in Sources */,
 				556D10742A7CE9BB006B6CF5 /* Localization.Common.swift in Sources */,
 				556D10792A7CECB6006B6CF5 /* Help.LocalStorage.swift in Sources */,
+				556D11A82A7D4D79006B6CF5 /* Views.Common.Loading.swift in Sources */,
+				556D118C2A7D25AB006B6CF5 /* Views.Feeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

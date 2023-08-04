@@ -17,6 +17,7 @@ struct Help {}
 
 struct ViewModels {}
 
+protocol Localizable {var text: String {get}}
 struct Localization {}
 
 struct Service {

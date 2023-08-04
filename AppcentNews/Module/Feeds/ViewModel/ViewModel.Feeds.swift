@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension ViewModels {
     
@@ -13,21 +14,31 @@ extension ViewModels {
         
         private let request = Service.Request.Feeds()
         
-        func fetchMovie() {
-               networkService.request(request) { [weak self] result in
-                   switch result {
-                   case .success(let feeds):
-                       guard let weak = self else {return}
-                       DispatchQueue.main.async {
-                           weak.items = feeds
-                       }
-                       self?.onFetchSucceed?()
-                   case .failure(let error):
-                       print(error.localizedDescription)
-                       self?.onFetchFailure?(error)
-                   }
-               }
-           }
+        override func loadDataAutomatically() {
+            fetchFeed(keyWord: "All")
+        }
+        
+        func fetchFeed(keyWord : String) {
+            self.request.searchQuery = keyWord.isEmpty ? "All" : keyWord
+            self.isNetworking = true
+            networkService.request(request) { [weak self] result in
+                switch result {
+                case .success(let feeds):
+                    guard let weak = self else {return}
+                    DispatchQueue.main.async {
+                        weak.items = feeds
+                        weak.isNetworking = false
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self?.alertTitle = "Server Error"
+                        self?.alertDescription = error.localizedDescription
+                        self?.showAlert = true
+                        self?.isNetworking = false
+                    }
+                }
+            }
+        }
         
     }
     

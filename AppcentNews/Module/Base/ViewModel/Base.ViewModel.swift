@@ -17,6 +17,7 @@ extension Base {
         @Published var item : T?
         @Published var filteredItems : T?
         @Published var filterModeIsActive : Bool = false
+        @Published var isNetworking : Bool = false
         
         let networkService: NetworkService = Network.DefaultService()
         //Alert Variables
@@ -26,9 +27,6 @@ extension Base {
         
         @Published var showAlert : Bool = false
         
-        var onFetchSucceed: (() -> Void)?
-        var onFetchFailure: ((Error) -> Void)?
-       
         init() {
             loadDataAutomatically()
         }

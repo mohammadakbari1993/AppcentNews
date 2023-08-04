@@ -11,9 +11,24 @@ import SwiftUI
 struct AppcentNewsApp: App {
     var body: some Scene {
         WindowGroup {
-            //var storage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
             
-            ContentView()
+            
+            TabView {
+                NavigationView {
+                    Views.Feeds()
+                }
+                .tabItem {
+                    Label("Feed", systemImage: "newspaper.circle")
+                }
+                NavigationView {
+                    Text("Mohammad")
+                }
+                .tabItem {
+                    Label("Favorites", systemImage: "star.circle")
+                }
+            }
+            
+            
         }
     }
 }

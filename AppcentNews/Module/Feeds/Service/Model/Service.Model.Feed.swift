@@ -37,6 +37,11 @@ extension Service.Model.Feeds {
             self.publishedAt = publishedAt
             self.url = url
         }
+        static let sample = Service.Model.Feeds.Feed(title: "Bundesliga: Test beendet: Augsburg trennt sich 1:1 von Besiktas",
+                                                     author: "Mohammad Akbari",
+                                                     source: .sample,
+                                                     publishedAt: "2023-07-25T09:49:51Z",
+                                                     url:"https://www.techradar.com/pro/this-nasty-stalkerware-was-found-spying-on-tens-of-thousands-of-phones")
     }
     
 }
@@ -51,6 +56,7 @@ extension Service.Model.Feeds.Feed {
             self.Id = Id
             self.Name = Name
         }
+        static let sample = Service.Model.Feeds.Feed.Source(Id: "google", Name: "Google news")
     }
     
 }

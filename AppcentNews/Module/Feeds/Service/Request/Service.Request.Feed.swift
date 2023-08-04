@@ -15,6 +15,8 @@ extension Service.Request {
         
         private var page : Int = 1
         
+        var searchQuery : String = "besiktas"
+        
         var url: String {
             let baseURL: String = "https://newsapi.org/v2/"
             let path: String = "everything"
@@ -23,7 +25,7 @@ extension Service.Request {
         
         var queryItems: [String : String] {
             [
-                "q" : "besiktas",
+                "q" : self.searchQuery,
                 "page" : "\(page)",
                 "apiKey": apiKey
             ]
@@ -44,6 +46,8 @@ extension Service.Request {
             let res = response.map()
             return res.articles
         }
+        
+
     }
     
 }
