@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel : ViewModels.Feeds = ViewModels.Feeds()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            List {
+                
+                
+                ForEach(viewModel.filterModeIsActive ? viewModel.filteredItems ?? [] : viewModel.items ?? []) { item in
+                    HStack {
+                        Image(systemName: "globe")
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
+                        Text(item.title)
+                            .padding(8)
+                        Spacer()
+                    }
+                }
+                
+ 
+                
+            }
         }
         .padding()
+        .onAppear{
+            viewModel.fetchMovie()
+            
+        }
+        
     }
 }
 

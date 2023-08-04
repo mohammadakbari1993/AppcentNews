@@ -11,6 +11,8 @@ import SwiftUI
 struct AppcentNewsApp: App {
     var body: some Scene {
         WindowGroup {
+            //var storage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
+            
             ContentView()
         }
     }

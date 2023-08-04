@@ -18,11 +18,17 @@ extension Base {
         @Published var filteredItems : T?
         @Published var filterModeIsActive : Bool = false
         
+        let networkService: NetworkService = Network.DefaultService()
         //Alert Variables
+        
         var alertTitle : String?
         var alertDescription : String?
+        
         @Published var showAlert : Bool = false
         
+        var onFetchSucceed: (() -> Void)?
+        var onFetchFailure: ((Error) -> Void)?
+       
         init() {
             loadDataAutomatically()
         }

@@ -9,7 +9,11 @@ import Foundation
 
 struct Views {}
 
+struct Network {}
+
 struct Base {}
+
+struct Help {}
 
 struct ViewModels {}
 

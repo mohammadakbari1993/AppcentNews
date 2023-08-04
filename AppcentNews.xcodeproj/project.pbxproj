@@ -18,6 +18,15 @@
 		556D10722A7CE8E0006B6CF5 /* Base.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D10712A7CE8E0006B6CF5 /* Base.ViewModel.swift */; };
 		556D10742A7CE9BB006B6CF5 /* Localization.Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D10732A7CE9BB006B6CF5 /* Localization.Common.swift */; };
 		556D10762A7CE9FB006B6CF5 /* Views.Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D10752A7CE9FB006B6CF5 /* Views.Common.swift */; };
+		556D10792A7CECB6006B6CF5 /* Help.LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D10782A7CECB6006B6CF5 /* Help.LocalStorage.swift */; };
+		556D116D2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D116C2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift */; };
+		556D11702A7CF8E0006B6CF5 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D116F2A7CF8E0006B6CF5 /* DataRequest.swift */; };
+		556D11732A7CF9B9006B6CF5 /* Network.Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11722A7CF9B9006B6CF5 /* Network.Service.swift */; };
+		556D117A2A7CFBDA006B6CF5 /* Service.Request.Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11792A7CFBDA006B6CF5 /* Service.Request.Feed.swift */; };
+		556D11802A7D0259006B6CF5 /* Service.Response.Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D117F2A7D0259006B6CF5 /* Service.Response.Feed.swift */; };
+		556D11842A7D02A6006B6CF5 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11832A7D02A6006B6CF5 /* Mappable.swift */; };
+		556D11862A7D031D006B6CF5 /* Service.Model.Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11852A7D031D006B6CF5 /* Service.Model.Feed.swift */; };
+		556D11892A7D0C4A006B6CF5 /* ViewModel.Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +61,15 @@
 		556D10712A7CE8E0006B6CF5 /* Base.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.ViewModel.swift; sourceTree = "<group>"; };
 		556D10732A7CE9BB006B6CF5 /* Localization.Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.Common.swift; sourceTree = "<group>"; };
 		556D10752A7CE9FB006B6CF5 /* Views.Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.swift; sourceTree = "<group>"; };
+		556D10782A7CECB6006B6CF5 /* Help.LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.LocalStorage.swift; sourceTree = "<group>"; };
+		556D116C2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.HTTPMethod.swift; sourceTree = "<group>"; };
+		556D116F2A7CF8E0006B6CF5 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		556D11722A7CF9B9006B6CF5 /* Network.Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.Service.swift; sourceTree = "<group>"; };
+		556D11792A7CFBDA006B6CF5 /* Service.Request.Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Request.Feed.swift; sourceTree = "<group>"; };
+		556D117F2A7D0259006B6CF5 /* Service.Response.Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Response.Feed.swift; sourceTree = "<group>"; };
+		556D11832A7D02A6006B6CF5 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		556D11852A7D031D006B6CF5 /* Service.Model.Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.Model.Feed.swift; sourceTree = "<group>"; };
+		556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.Feeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +120,7 @@
 		556D103C2A7CE556006B6CF5 /* AppcentNews */ = {
 			isa = PBXGroup;
 			children = (
+				556D11812A7D0292006B6CF5 /* Application */,
 				556D10692A7CE7D7006B6CF5 /* Network */,
 				556D10682A7CE7C9006B6CF5 /* Help */,
 				556D10672A7CE7C1006B6CF5 /* Module */,
@@ -142,6 +161,7 @@
 		556D10672A7CE7C1006B6CF5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				556D11742A7CFB89006B6CF5 /* Feeds */,
 				556D106D2A7CE870006B6CF5 /* Base */,
 				556D106C2A7CE868006B6CF5 /* Common */,
 			);
@@ -151,6 +171,7 @@
 		556D10682A7CE7C9006B6CF5 /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				556D10772A7CEC5E006B6CF5 /* LocalStorage */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -158,6 +179,9 @@
 		556D10692A7CE7D7006B6CF5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				556D11712A7CF9A6006B6CF5 /* Service */,
+				556D116E2A7CF8D5006B6CF5 /* DataRequest */,
+				556D116B2A7CF880006B6CF5 /* HTTPMethod */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -199,6 +223,105 @@
 			isa = PBXGroup;
 			children = (
 				556D10712A7CE8E0006B6CF5 /* Base.ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		556D10772A7CEC5E006B6CF5 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				556D10782A7CECB6006B6CF5 /* Help.LocalStorage.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		556D116B2A7CF880006B6CF5 /* HTTPMethod */ = {
+			isa = PBXGroup;
+			children = (
+				556D116C2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift */,
+			);
+			path = HTTPMethod;
+			sourceTree = "<group>";
+		};
+		556D116E2A7CF8D5006B6CF5 /* DataRequest */ = {
+			isa = PBXGroup;
+			children = (
+				556D116F2A7CF8E0006B6CF5 /* DataRequest.swift */,
+			);
+			path = DataRequest;
+			sourceTree = "<group>";
+		};
+		556D11712A7CF9A6006B6CF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				556D11722A7CF9B9006B6CF5 /* Network.Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		556D11742A7CFB89006B6CF5 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				556D11872A7D0C3B006B6CF5 /* ViewModel */,
+				556D11752A7CFBA0006B6CF5 /* Service */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		556D11752A7CFBA0006B6CF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				556D11782A7CFBB5006B6CF5 /* Model */,
+				556D11772A7CFBAC006B6CF5 /* Response */,
+				556D11762A7CFBA6006B6CF5 /* Request */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		556D11762A7CFBA6006B6CF5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				556D11792A7CFBDA006B6CF5 /* Service.Request.Feed.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		556D11772A7CFBAC006B6CF5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				556D117F2A7D0259006B6CF5 /* Service.Response.Feed.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		556D11782A7CFBB5006B6CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				556D11852A7D031D006B6CF5 /* Service.Model.Feed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		556D11812A7D0292006B6CF5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				556D11822A7D0299006B6CF5 /* Component */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		556D11822A7D0299006B6CF5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				556D11832A7D02A6006B6CF5 /* Mappable.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		556D11872A7D0C3B006B6CF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				556D11882A7D0C4A006B6CF5 /* ViewModel.Feeds.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -334,11 +457,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				556D10722A7CE8E0006B6CF5 /* Base.ViewModel.swift in Sources */,
+				556D11702A7CF8E0006B6CF5 /* DataRequest.swift in Sources */,
+				556D117A2A7CFBDA006B6CF5 /* Service.Request.Feed.swift in Sources */,
+				556D11862A7D031D006B6CF5 /* Service.Model.Feed.swift in Sources */,
 				556D10402A7CE556006B6CF5 /* ContentView.swift in Sources */,
+				556D11732A7CF9B9006B6CF5 /* Network.Service.swift in Sources */,
+				556D11892A7D0C4A006B6CF5 /* ViewModel.Feeds.swift in Sources */,
 				556D10762A7CE9FB006B6CF5 /* Views.Common.swift in Sources */,
+				556D11802A7D0259006B6CF5 /* Service.Response.Feed.swift in Sources */,
+				556D11842A7D02A6006B6CF5 /* Mappable.swift in Sources */,
 				556D106B2A7CE7FD006B6CF5 /* NAMESPACING.swift in Sources */,
+				556D116D2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift in Sources */,
 				556D103E2A7CE556006B6CF5 /* AppcentNewsApp.swift in Sources */,
 				556D10742A7CE9BB006B6CF5 /* Localization.Common.swift in Sources */,
+				556D10792A7CECB6006B6CF5 /* Help.LocalStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
