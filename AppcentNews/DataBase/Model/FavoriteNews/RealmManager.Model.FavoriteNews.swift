@@ -38,7 +38,7 @@ class RealmSource : Object {
 extension RealmNews {
     
     var newsObject : Service.Model.Feeds.Feed {
-        return .init(title: self.title, author: self.author, source: .init(Id: self.source?.Id ?? "", Name: self.source?.Name ?? ""), publishedAt: self.publishedAt, url: self.url, urlToImage: urlToImage,description: _description, content: content)
+        return .init(title: self.title, author: self.author, source: .init(Id: self.source?.Id ?? "", Name: self.source?.Name ?? ""), publishedAt: self.publishedAt, url: self.url, urlToImage: urlToImage,description: _description, content: content, isFavorite: true)
     }
     
 }

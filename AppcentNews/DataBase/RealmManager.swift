@@ -14,7 +14,7 @@ class RealmManager {
     
     private var realm: Realm
     
-    private var config = Realm.Configuration(encryptionKey: RealmKeyManager.shared.getKey() , schemaVersion: 1,
+    private var config = Realm.Configuration(encryptionKey: RealmKeyManager.shared.getKey() , schemaVersion: 2,
                                              
                                              // Set the block which will be called automatically when opening a Realm with
                                              // a schema version lower than the one set above

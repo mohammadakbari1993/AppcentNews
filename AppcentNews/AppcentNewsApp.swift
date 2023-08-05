@@ -12,7 +12,6 @@ struct AppcentNewsApp: App {
     var body: some Scene {
         WindowGroup {
             
-            
             TabView {
                 NavigationView {
                     Views.Feeds()
@@ -21,14 +20,17 @@ struct AppcentNewsApp: App {
                     Label("Feed", systemImage: "newspaper.circle")
                 }
                 NavigationView {
-                    Text("Mohammad")
+                    Views.FavoriteList()
                 }
                 .tabItem {
                     Label("Favorites", systemImage: "star.circle")
                 }
+            }.onAppear {
+                var storage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
+                storage.value = AppKeys.api_key.value
             }
-            
-            
+                        
         }
+        
     }
 }

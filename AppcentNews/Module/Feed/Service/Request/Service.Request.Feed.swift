@@ -11,8 +11,8 @@ extension Service.Request {
     
     class Feeds : DataRequest {
         
-        private let apiKey: String = "77632da6f1454e42ac89793a889d264b"
-        
+        var apiKeyStorage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
+ 
         private var page : Int = 1
         
         var searchQuery : String = "besiktas"
@@ -27,7 +27,7 @@ extension Service.Request {
             [
                 "q" : self.searchQuery,
                 "page" : "\(page)",
-                "apiKey": apiKey
+                "apiKey": apiKeyStorage.value ?? ""
             ]
         }
         

@@ -12,17 +12,15 @@ extension ViewModels {
     
     class FeedDetail : Base.ViewModel<Service.Model.Feeds.Feed> {
         
-        private let request = Service.Request.Feeds()
-        
+ 
         @Published var showWebView : Bool = false
         @Published var isFavorite : Bool = false
         
         init(feed : Service.Model.Feeds.Feed) {
             super.init()
             DispatchQueue.main.async {
-                feed.isFavorite = RealmManager.shared.readFavoriteNews().filter({$0.title == feed.title && $0.publishedAt == feed.publishedAt}).count > 0
+                self.isFavorite = RealmManager.shared.readFavoriteNews().filter({$0.title == feed.title && $0.publishedAt == feed.publishedAt}).count > 0
             }
-            self.isFavorite = feed.isFavorite ?? false
             self.item = feed
         }
       

@@ -51,6 +51,9 @@
 		559D687D2A7E420A009071FE /* Views.Common.ImageHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D687C2A7E420A009071FE /* Views.Common.ImageHolder.swift */; };
 		559D68802A7E4D7B009071FE /* Views.Common.Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D687F2A7E4D7B009071FE /* Views.Common.Button.swift */; };
 		55FBE1612A7E63BE005859EF /* Views.Common.WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1602A7E63BE005859EF /* Views.Common.WebView.swift */; };
+		55FBE1652A7E6EE6005859EF /* ViewModel.FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1642A7E6EE6005859EF /* ViewModel.FavoriteList.swift */; };
+		55FBE1682A7E6F93005859EF /* Views.FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE1672A7E6F93005859EF /* Views.FavoriteList.swift */; };
+		55FBE16B2A7E7003005859EF /* Localization.FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBE16A2A7E7003005859EF /* Localization.FavoriteList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,9 @@
 		559D687C2A7E420A009071FE /* Views.Common.ImageHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.ImageHolder.swift; sourceTree = "<group>"; };
 		559D687F2A7E4D7B009071FE /* Views.Common.Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.Button.swift; sourceTree = "<group>"; };
 		55FBE1602A7E63BE005859EF /* Views.Common.WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.Common.WebView.swift; sourceTree = "<group>"; };
+		55FBE1642A7E6EE6005859EF /* ViewModel.FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.FavoriteList.swift; sourceTree = "<group>"; };
+		55FBE1672A7E6F93005859EF /* Views.FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.FavoriteList.swift; sourceTree = "<group>"; };
+		55FBE16A2A7E7003005859EF /* Localization.FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.FavoriteList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 		556D10672A7CE7C1006B6CF5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				55FBE1622A7E6EC7005859EF /* FavoriteList */,
 				559D68702A7E3E39009071FE /* FeedDetail */,
 				556D11742A7CFB89006B6CF5 /* Feed */,
 				556D106D2A7CE870006B6CF5 /* Base */,
@@ -596,6 +603,40 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		55FBE1622A7E6EC7005859EF /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				55FBE1692A7E6FF4005859EF /* Localization */,
+				55FBE1662A7E6F78005859EF /* View */,
+				55FBE1632A7E6ED5005859EF /* ViewModel */,
+			);
+			path = FavoriteList;
+			sourceTree = "<group>";
+		};
+		55FBE1632A7E6ED5005859EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				55FBE1642A7E6EE6005859EF /* ViewModel.FavoriteList.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		55FBE1662A7E6F78005859EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55FBE1672A7E6F93005859EF /* Views.FavoriteList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55FBE1692A7E6FF4005859EF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				55FBE16A2A7E7003005859EF /* Localization.FavoriteList.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -742,6 +783,7 @@
 				556D11702A7CF8E0006B6CF5 /* DataRequest.swift in Sources */,
 				556D11992A7D4496006B6CF5 /* Service.Response.Common.swift in Sources */,
 				556D118F2A7D2613006B6CF5 /* Views.Feeds.FeedRow.swift in Sources */,
+				55FBE1682A7E6F93005859EF /* Views.FavoriteList.swift in Sources */,
 				556D119C2A7D44CB006B6CF5 /* Service.Model.Common.swift in Sources */,
 				556D117A2A7CFBDA006B6CF5 /* Service.Request.Feed.swift in Sources */,
 				556D11922A7D380E006B6CF5 /* Views.Common.SearchField.swift in Sources */,
@@ -752,6 +794,7 @@
 				559D676F2A7E3257009071FE /* RealmManager.swift in Sources */,
 				559D686F2A7E3A1C009071FE /* StringDate+Convert.swift in Sources */,
 				559D67752A7E35F4009071FE /* RealmManager.Model.FavoriteNews.swift in Sources */,
+				55FBE1652A7E6EE6005859EF /* ViewModel.FavoriteList.swift in Sources */,
 				559D68682A7E396D009071FE /* DateFormatsEnum.swift in Sources */,
 				556D10762A7CE9FB006B6CF5 /* Views.Common.swift in Sources */,
 				559D686C2A7E39C6009071FE /* Date+Convert.swift in Sources */,
@@ -760,6 +803,7 @@
 				559D68802A7E4D7B009071FE /* Views.Common.Button.swift in Sources */,
 				556D106B2A7CE7FD006B6CF5 /* NAMESPACING.swift in Sources */,
 				559D68762A7E3EAE009071FE /* ViewModel.FeedDetail.swift in Sources */,
+				55FBE16B2A7E7003005859EF /* Localization.FavoriteList.swift in Sources */,
 				559D67732A7E35C8009071FE /* RealmManager.Model.swift in Sources */,
 				556D119F2A7D4501006B6CF5 /* Service.Model.Common.ServerError.swift in Sources */,
 				556D116D2A7CF8AF006B6CF5 /* Network.HTTPMethod.swift in Sources */,

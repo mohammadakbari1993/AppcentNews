@@ -34,6 +34,12 @@ extension Help {
 
 enum AppKeys : String {
     case api_key = "local_storage_api_key"
+    var value : String {
+        switch self {
+        case .api_key:
+            return "77632da6f1454e42ac89793a889d264b"
+        }
+    }
 }
     
 

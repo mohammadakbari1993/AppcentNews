@@ -34,7 +34,7 @@ extension Service.Model.Feeds {
         var description : String
         var content : String
         var isFavorite : Bool?
-        init(title: String, author: String, source: Service.Model.Feeds.Feed.Source, publishedAt: String, url: String, urlToImage: String, description: String, content: String) {
+        init(title: String, author: String, source: Service.Model.Feeds.Feed.Source, publishedAt: String, url: String, urlToImage: String, description: String, content: String, isFavorite : Bool? = nil) {
             self.title = title
             self.author = author
             self.source = source
@@ -43,6 +43,7 @@ extension Service.Model.Feeds {
             self.urlToImage = urlToImage
             self.description = description
             self.content = content
+            self.isFavorite = isFavorite
         }
         
         static let sample = Service.Model.Feeds.Feed(title: "Bundesliga: Test beendet: Augsburg trennt sich 1:1 von Besiktas",
@@ -71,6 +72,9 @@ extension Service.Model.Feeds {
                 object.source = self.source.realmObject
                 object.publishedAt = self.publishedAt
                 object.url = self.url
+                object.urlToImage = self.urlToImage
+                object._description = self.description
+                object.content = self.content
                 return object
             }
         }
