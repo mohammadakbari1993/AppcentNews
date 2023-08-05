@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftUI
+import FirebaseCore
+import FirebaseAnalytics
 
 extension ViewModels {
     
@@ -24,16 +26,28 @@ extension ViewModels {
             self.item = feed
         }
       
-        func setFavorite(){
+        func setFavorite() {
+            
             DispatchQueue.main.async {
+                
                 guard let model = self.item?.realmObject else {return}
+            
                 if let item = RealmManager.shared.readFavoriteNews().filter({$0.title == (self.item?.title ?? "") && $0.publishedAt == (self.item?.publishedAt ?? "")}).last {
+                    
+                    AnaliticsEvents.delted_from_favorite(news: item.newsObject).sendEvent()
                     RealmManager.shared.deleteObjectFromRealm(item)
+                    
                 } else {
+                    
                     RealmManager.shared.saveToRealm(model)
+                    AnaliticsEvents.added_to_favorite(news: model.newsObject).sendEvent()
+                    
                 }
+                
                 self.item?.isFavorite?.toggle()
+                
             }
+            
             isFavorite.toggle()
         }
         

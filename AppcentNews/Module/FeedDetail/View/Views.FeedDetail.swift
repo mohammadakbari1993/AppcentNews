@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAnalytics
 
 extension Views {
     
@@ -67,6 +68,7 @@ extension Views {
                     }
                 }
                 Views.Common.AppcentButton(title: Localization.FeedDetail.Button.news_source.text, action: {
+                    AnaliticsEvents.went_to_source(news: self.viewModel.item ?? .sample).sendEvent()
                     self.viewModel.showWebView = true
                 })
                 .padding([.bottom, .horizontal])
