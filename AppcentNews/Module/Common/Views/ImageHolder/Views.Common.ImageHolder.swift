@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+
 extension Views.Common {
     struct ImageHolder: View {
         var image : String = ""
@@ -13,15 +15,16 @@ extension Views.Common {
             
             VStack {
                 if let url = URL(string: image) {
-                    AsyncImage(
-                        url: url,
-                        content: { image in
-                            image.resizable()
-                        },
-                        placeholder: {
-                            ProgressView()
+                    WebImage(url: url)
+                        .resizable()
+                        .placeholder {
+                            Image(systemName: "photo")
+                                .foregroundColor(Color.gray)
+                                .padding()
                         }
-                    )
+                        .indicator(.activity) // Activity Indicator
+                        .transition(.fade(duration: 0.5))
+  
                 } else {
                     Image(image)
                         .resizable()

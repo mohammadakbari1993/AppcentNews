@@ -24,7 +24,12 @@ extension Service.Model {
 
 extension Service.Model.Feeds {
     
-    class Feed : Codable , Identifiable {
+    class Feed : Codable , Identifiable, Equatable {
+        
+        static func == (lhs: Service.Model.Feeds.Feed, rhs: Service.Model.Feeds.Feed) -> Bool {
+            return lhs.publishedAt == rhs.publishedAt && lhs.author == rhs.author && lhs.title == rhs.title
+        }
+        
         var title : String
         var author : String
         var source : Service.Model.Feeds.Feed.Source

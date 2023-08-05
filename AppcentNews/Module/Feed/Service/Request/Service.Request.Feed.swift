@@ -14,7 +14,7 @@ extension Service.Request {
         var apiKeyStorage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
  
         private var page : Int = 1
-        
+
         var searchQuery : String = "besiktas"
         
         var url: String {
@@ -44,6 +44,9 @@ extension Service.Request {
             
             let response = try decoder.decode(Service.Response.Feeds.self, from: data)
             let res = response.map()
+            if !res.articles.isEmpty {
+                self.page += 1
+            }
             return res.articles
         }
         

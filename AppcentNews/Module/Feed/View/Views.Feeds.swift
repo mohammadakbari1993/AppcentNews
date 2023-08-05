@@ -25,7 +25,7 @@ extension Views {
                 
                 Spacer()
                 
-                if viewModel.isNetworking {
+                if viewModel.isNetworking && (viewModel.items?.isEmpty ?? true) {
                 
                     Views.Common.Loading()
                     
@@ -38,10 +38,27 @@ extension Views {
                             ForEach(viewModel.filterModeIsActive ? viewModel.filteredItems ?? [] : viewModel.items ?? []) { item in
                                 NavigationLink(destination: Views.FeedDetail(news : item)) {
                                     Views.Feeds.FeedRow(feed: item)
+                                        .onAppear{
+                                            viewModel.fetchMore(keyWord: searchFieldText, model: item)
+                                        }
                                         .frame(maxHeight: 100)
+                                        
                                 }
+                                
+                                
                             }
                         }
+                        
+                        if viewModel.isNetworking && !(viewModel.items?.isEmpty ?? true) {
+                        
+                            HStack {
+                                Spacer()
+                                ProgressView()
+                                Spacer()
+                            }
+                            
+                        }
+                        
                     }
                     .listStyle(PlainListStyle())
                 }

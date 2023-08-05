@@ -14,8 +14,16 @@ extension ViewModels {
         
         private let request = Service.Request.Feeds()
         
+        private var needToFetchMore : Bool = false
+        
         override func loadDataAutomatically() {
             fetchFeed(keyWord: "All")
+        }
+        
+        func fetchMore(keyWord : String, model : Service.Model.Feeds.Feed) {
+            if needToFetchMore && model == (self.items?.last ?? .sample) && !isNetworking {
+                fetchFeed(keyWord: keyWord)
+            }
         }
         
         func fetchFeed(keyWord : String) {
@@ -26,8 +34,10 @@ extension ViewModels {
                 case .success(let feeds):
                     guard let weak = self else {return}
                     DispatchQueue.main.async {
-                        weak.items = feeds
+                        
+                        weak.items = (weak.items == nil) ? feeds : weak.items! + feeds
                         weak.isNetworking = false
+                        weak.needToFetchMore = !feeds.isEmpty
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
