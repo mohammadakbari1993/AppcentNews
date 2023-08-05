@@ -11,7 +11,7 @@ extension Service.Request {
     
     class Feeds : DataRequest {
         
-        private let apiKey: String = "90f78b5e459f4557a6d285161db89387"
+        private let apiKey: String = "77632da6f1454e42ac89793a889d264b"
         
         private var page : Int = 1
         

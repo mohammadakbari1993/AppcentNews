@@ -32,16 +32,18 @@ extension Views {
                 } else {
                     
                     List {
-                        if viewModel.items?.isEmpty ?? true {
+                        if (viewModel.items?.isEmpty ?? true) {
                             Views.Common.EmptyListView(descriptionText: searchFieldText.isEmpty ? (viewModel.alertDescription ?? Localization.Feeds.empty_view_message.text) : Localization.Feeds.empty_view_message.text)
                         } else {
                             ForEach(viewModel.filterModeIsActive ? viewModel.filteredItems ?? [] : viewModel.items ?? []) { item in
-                                NavigationLink(destination: Text("Web View")) {
+                                NavigationLink(destination: Views.FeedDetail(news : item)) {
                                     Views.Feeds.FeedRow(feed: item)
+                                        .frame(maxHeight: 100)
                                 }
                             }
                         }
                     }
+                    .listStyle(PlainListStyle())
                 }
                 
                 Spacer()

@@ -13,8 +13,8 @@ extension Service.Response {
         var status : String
         var totalResults : Int
         var articles : [Service.Response.Feeds.Feed]
-        typealias T = Service.Model.Feeds
         
+        typealias T = Service.Model.Feeds
         func map() -> T {
             return T(status: status, totalResults: totalResults, articles: articles.map({$0.map()}))
         }
@@ -30,10 +30,15 @@ extension Service.Response.Feeds {
         var source : Service.Response.Feeds.Feed.Source
         var publishedAt : String
         var url : String?
+        var imageUrl : String?
+        var urlToImage : String?
+        var description : String?
+        var content : String?
+        
         typealias T = Service.Model.Feeds.Feed
         
         func map() -> T {
-            return T(title: title, author: author ?? "", source: source.map(), publishedAt: publishedAt, url: url ?? "")
+            return T(title: title, author: author ?? "", source: source.map(), publishedAt: publishedAt, url: url ?? "", urlToImage: urlToImage ?? "",description: description ?? "", content: content ?? "")
         }
     }
     
