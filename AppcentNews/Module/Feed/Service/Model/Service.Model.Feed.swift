@@ -33,7 +33,7 @@ extension Service.Model.Feeds {
         var urlToImage : String
         var description : String
         var content : String
-        
+        var isFavorite : Bool?
         init(title: String, author: String, source: Service.Model.Feeds.Feed.Source, publishedAt: String, url: String, urlToImage: String, description: String, content: String) {
             self.title = title
             self.author = author
@@ -63,9 +63,9 @@ extension Service.Model.Feeds {
         
         
         
-        var realmObject : RealmManager.Model.News {
+        var realmObject : RealmNews {
             get {
-                let object = RealmManager.Model.News()
+                let object = RealmNews()
                 object.title = self.title
                 object.author = self.author
                 object.source = self.source.realmObject
@@ -91,9 +91,9 @@ extension Service.Model.Feeds.Feed {
         }
         static let sample = Service.Model.Feeds.Feed.Source(Id: "google", Name: "Google news")
         
-        var realmObject : RealmManager.Model.News.Source {
+        var realmObject : RealmSource {
             get {
-                let object = RealmManager.Model.News.Source()
+                let object = RealmSource()
                 object.Id = self.Id
                 object.Name = self.Name
                 return object

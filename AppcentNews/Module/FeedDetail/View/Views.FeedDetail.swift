@@ -72,6 +72,23 @@ extension Views {
                 .padding([.bottom, .horizontal])
             }
             .navigationTitle(Localization.FeedDetail.page_title.text)
+            .navigationBarItems(trailing: Button(action: {
+                //TODO: Handle Your action
+            }, label: {
+                HStack {
+                    
+                    Button {
+                        viewModel.setFavorite()
+                    } label: {
+                        Image(systemName: (self.viewModel.isFavorite) ? "star.fill" : "star")
+                    }
+                    
+                    if let link = URL(string: self.viewModel.item?.url ?? "") {
+                        ShareLink(item: link, message: Text("Read A News Here!"))
+                    }
+
+                }
+            }))
             .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: self.$viewModel.showAlert, content: self.viewModel.getAlert)
             

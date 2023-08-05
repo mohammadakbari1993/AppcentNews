@@ -67,8 +67,8 @@ class RealmManager {
     }
     
     
-    func readFavoriteNews() -> Results<RealmManager.Model.News> {
-        let result: Results<RealmManager.Model.News> = realm.objects(RealmManager.Model.News.self)
+    func readFavoriteNews() -> Results<RealmNews> {
+        let result: Results<RealmNews> = realm.objects(RealmNews.self)
         return result
     }
     
