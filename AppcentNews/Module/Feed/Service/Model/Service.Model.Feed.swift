@@ -63,7 +63,7 @@ extension Service.Model.Feeds {
         
         var displayedPublishAt : String {
             get {
-                return publishedAt.dateConvert(to: .MONTHNAME_DAY)
+                return publishedAt.dateConvert(to: .MONTHNAME_DAY) ?? "---"
             }
         }
         

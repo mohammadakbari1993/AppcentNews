@@ -9,9 +9,10 @@ import Foundation
 
 extension String {
     
-    func dateConvert(from inputDateFormat : DateFormatsEnum = .ISO, to outputDateFormat: DateFormatsEnum) -> String {
+    func dateConvert(from inputDateFormat : DateFormatsEnum = .ISO, to outputDateFormat: DateFormatsEnum) -> String? {
         guard let date = processDate(inputDateFormat: inputDateFormat) else {
-            return "Invalid date format"
+            print("Invalid date format in \(#file)")
+            return nil
         }
         return date.convertToString(outputDateFormat: outputDateFormat)
     }
@@ -27,4 +28,5 @@ extension String {
             return nil
         }
     }
+    
 }

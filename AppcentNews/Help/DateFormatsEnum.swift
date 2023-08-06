@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DateFormatsEnum : String {
+enum DateFormatsEnum : String, CaseIterable {
     case ISO = "yyyy-MM-dd'T'HH:mm:ssZ"
     case ISO_STANDARD = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     case SHORT_WITH_DOTS = "dd.MM.yy"
@@ -31,5 +31,5 @@ enum DateFormatsEnum : String {
     case TWO_DIGIT_SECOND = "ss"
     case ONE_OR_TWO_DIGIT_SECOND = "s"
     case AM_PM_12_HOUR_FORMAT = "a"
-
+    case UNDEFINED = "UNDEFINED"
 }
