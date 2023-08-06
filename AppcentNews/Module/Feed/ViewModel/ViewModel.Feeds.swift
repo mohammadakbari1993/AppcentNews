@@ -12,29 +12,34 @@ extension ViewModels {
     
     class Feeds : Base.ViewModel<[Service.Model.Feeds.Feed]> {
         
-        private let request = Service.Request.Feeds()
+        var request = Service.Request.Feeds()
         
         private var needToFetchMore : Bool = false
         
         override func loadDataAutomatically() {
-            fetchFeed(keyWord: "All")
+            fetchFeed()
         }
         
-        func fetchMore(keyWord : String, model : Service.Model.Feeds.Feed) {
+        func fetchMore(model : Service.Model.Feeds.Feed) {
             if needToFetchMore && model == (self.items?.last ?? .sample) && !isNetworking {
-                fetchFeed(keyWord: keyWord)
+                fetchFeed()
             }
         }
         
-        func fetchFeed(keyWord : String) {
-            self.request.searchQuery = keyWord.isEmpty ? "All" : keyWord
+        func refresh() {
+            request.page = 1
+            needToFetchMore = true
+            self.items?.removeAll()
+            fetchFeed()
+        }
+        
+        func fetchFeed() {
             self.isNetworking = true
             networkService.request(request) { [weak self] result in
                 switch result {
                 case .success(let feeds):
                     guard let weak = self else {return}
                     DispatchQueue.main.async {
-                        
                         weak.items = (weak.items == nil) ? feeds : weak.items! + feeds
                         weak.isNetworking = false
                         weak.needToFetchMore = !feeds.isEmpty

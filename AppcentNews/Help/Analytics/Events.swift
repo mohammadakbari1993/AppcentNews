@@ -19,7 +19,7 @@ enum AnaliticsEvents {
         case .added_to_favorite:
             return "added_to_favorite"
         case .delted_from_favorite:
-            return "delted_from_favorite"
+            return "deleted_from_favorite"
         case .went_to_source:
             return "went_to_source"
         }

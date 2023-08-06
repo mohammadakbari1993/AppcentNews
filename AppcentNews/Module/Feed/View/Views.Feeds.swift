@@ -19,7 +19,7 @@ extension Views {
             VStack {
                 
                 Views.Common.SearchField(text: $searchFieldText, placeHolder: Localization.Feeds.Input.placeHolder.text, onSubmit: {
-                    viewModel.fetchFeed(keyWord: searchFieldText)
+                    viewModel.refresh()
                 })
                     .padding(.top)
                 
@@ -32,6 +32,7 @@ extension Views {
                 } else {
                     
                     List {
+                        
                         if (viewModel.items?.isEmpty ?? true) {
                             Views.Common.EmptyListView(descriptionText: searchFieldText.isEmpty ? (viewModel.alertDescription ?? Localization.Feeds.empty_view_message.text) : Localization.Feeds.empty_view_message.text)
                         } else {
@@ -39,7 +40,7 @@ extension Views {
                                 NavigationLink(destination: Views.FeedDetail(news : item)) {
                                     Views.Feeds.FeedRow(feed: item)
                                         .onAppear{
-                                            viewModel.fetchMore(keyWord: searchFieldText, model: item)
+                                            viewModel.fetchMore(model: item)
                                         }
                                         .frame(maxHeight: 100)
                                         
@@ -49,7 +50,7 @@ extension Views {
                             }
                         }
                         
-                        if viewModel.isNetworking && !(viewModel.items?.isEmpty ?? true) {
+                        if viewModel.isNetworking {
                         
                             HStack {
                                 Spacer()
@@ -67,8 +68,9 @@ extension Views {
                 
             }
             .onChange(of: searchFieldText) { newValue in
+                viewModel.request.searchQuery = newValue
                 if newValue.isEmpty {
-                    viewModel.fetchFeed(keyWord: newValue)
+                    viewModel.refresh()
                 }
             }
             .navigationTitle(Localization.Feeds.page_title.text)

@@ -13,7 +13,7 @@ extension Service.Request {
         
         var apiKeyStorage = Help.LocalStorage<String>.getStorage(key: AppKeys.api_key.rawValue)
  
-        private var page : Int = 1
+        var page : Int = 1
 
         var searchQuery : String = "besiktas"
         
@@ -25,7 +25,7 @@ extension Service.Request {
         
         var queryItems: [String : String] {
             [
-                "q" : self.searchQuery,
+                "q" : self.searchQuery.isEmpty ? "besiktas" : self.searchQuery,
                 "page" : "\(page)",
                 "apiKey": apiKeyStorage.value ?? ""
             ]

@@ -26,10 +26,19 @@ extension Views.Common {
                         .transition(.fade(duration: 0.5))
   
                 } else {
-                    Image(image)
-                        .resizable()
-                        .foregroundColor(Color.gray)
-                        .padding()
+                    
+                    if image.isEmpty {
+                        Image(systemName: "photo")
+                            .resizable()
+                            .foregroundColor(Color.gray)
+                            .padding()
+                    } else {
+                        Image(image)
+                            .resizable()
+                            .foregroundColor(Color.gray)
+                            .padding()
+                    }
+                    
                 }
             }
             .background(Color.white)
